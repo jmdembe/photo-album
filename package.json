@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jmdembe/photo-album/issues"
   },
-  "homepage": "https://github.com/jmdembe/photo-album#readme"
+  "homepage": "https://github.com/jmdembe/photo-album#readme",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
 }
