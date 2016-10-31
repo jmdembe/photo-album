@@ -17,17 +17,21 @@
           var previousImage = currentElement.prev();
           var nextImage = currentElement.next();
 
-          if ($target.is('.previous')) {
+          if ($target.is('.previous') && !currentElement.is(':first-child')) {
               currentElement.removeClass('zoomed');
               previousImage.addClass('zoomed')
                 .append($('nav'));
-
           }
 
-          if ($target.is('.next')) {
+          if ($target.is('.next') && !currentElement.is(':last-child')) {
               currentElement.removeClass('zoomed');
               nextImage.toggleClass('zoomed')
                 .append($('nav'));
+          }
+
+          if (currentElement.is(':first-child') || currentElement.is(':last-child')) {
+              currentElement.removeClass('zoomed')
+              $('main').removeClass('zooming')
 
           }
 
