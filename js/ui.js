@@ -8,12 +8,12 @@
                 $(this)
                   .toggleClass('zoomed')
                   .append($('nav'));
-
             })
 
       $('nav').on('click', 'button', function nextImage(event) {
-          var target = $(event.target);
-          console.log("is this happening?");
+          event.stopPropagation();
+          console.log("HELLO.");
+
       })
 
 })();
