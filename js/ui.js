@@ -19,13 +19,15 @@
 
           if ($target.is('.previous') && !currentElement.is(':first-child')) {
               currentElement.removeClass('zoomed');
-              previousImage.addClass('zoomed')
-                .append($('nav'));
+              previousImage
+                  .addClass('zoomed')
+                  .append($('nav'));
           }
 
           if ($target.is('.next') && !currentElement.is(':last-child')) {
               currentElement.removeClass('zoomed');
-              nextImage.toggleClass('zoomed')
+              nextImage
+                .toggleClass('zoomed')
                 .append($('nav'));
           }
 
@@ -34,9 +36,6 @@
               $('main').removeClass('zooming')
 
           }
-
-          // once you have the li... you can call .next() or .prev()
-          // then what do you need to add to that new li?
 
       })
 
