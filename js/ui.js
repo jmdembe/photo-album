@@ -10,20 +10,26 @@
                   .append($('nav'));
             })
 
-      $('nav').on('click', 'button', function nextImage(event) {
+      $('nav').on('click', 'button', function imageToggle(event) {
           event.stopPropagation();
           var $target = $(event.target);
-          var previousImage = $(this).closest('li').prev();
-          var nextImage = $(this).closest('li').next();
+          var currentElement = $(this).closest('li');
+          var previousImage = currentElement.prev();
+          var nextImage = currentElement.next();
 
           if ($target.is('.previous')) {
-              previousImage.toggleClass('zoomed');
+              currentElement.removeClass('zoomed');
+              previousImage.addClass('zoomed')
+                .append($('nav'));
+
           }
 
-          if ($target.is ('.next')) {
-              nextImage.toggleClass('zoomed');
-          }
+          if ($target.is('.next')) {
+              currentElement.removeClass('zoomed');
+              nextImage.toggleClass('zoomed')
+                .append($('nav'));
 
+          }
 
           // once you have the li... you can call .next() or .prev()
           // then what do you need to add to that new li?
