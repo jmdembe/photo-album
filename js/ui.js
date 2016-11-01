@@ -33,9 +33,9 @@
 
           if (currentElement.is(':first-child') || currentElement.is(':last-child')) {
               currentElement
-                  .removeClass('zoomed')
+                  .removeClass('zoomed');
               $('main')
-                  .removeClass('zooming')
+                  .removeClass('zooming');
 
           }
 
