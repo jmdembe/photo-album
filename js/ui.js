@@ -18,7 +18,7 @@
           var nextImage = currentElement.next();
 
           if ($target.is('.previous') && !currentElement.is(':first-child')) {
-              currentElement.removeClass('zoomed');
+              currentElement.removeClass('zoomed')
               previousImage
                   .addClass('zoomed')
                   .append($('nav'));
