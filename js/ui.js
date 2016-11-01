@@ -32,8 +32,10 @@
           }
 
           if (currentElement.is(':first-child') || currentElement.is(':last-child')) {
-              currentElement.removeClass('zoomed')
-              $('main').removeClass('zooming')
+              currentElement
+                  .removeClass('zoomed')
+              $('main')
+                  .removeClass('zooming')
 
           }
 
